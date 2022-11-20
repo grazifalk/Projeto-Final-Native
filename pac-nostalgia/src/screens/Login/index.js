@@ -21,8 +21,8 @@ export default function Login() {
 
   const navigation = useNavigation();
 
-  function screenRecuperacaoSenha() {
-    navigation.navigate("RecuperacaoSenha");
+  function screenRememberPassword() {
+    navigation.navigate("RememberPassword");
   }
 
   return (
@@ -43,7 +43,7 @@ export default function Login() {
       <StButton>
         <TextButton>ENTRAR</TextButton>
       </StButton>
-      <TouchableOpacity onPress={screenRecuperacaoSenha}>
+      <TouchableOpacity onPress={screenRememberPassword}>
         <Recover>Esqueceu a senha? Clique aqui!</Recover>
       </TouchableOpacity>
       <TouchableOpacity>
