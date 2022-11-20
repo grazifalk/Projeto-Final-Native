@@ -19,6 +19,12 @@ export default function ChangePassword() {
     ConfirmPassword: "",
   });
 
+  // const navigation = useNavigation();
+
+  // function screenChangePassword() {
+  //   navigation.navigate("ChangePassword");
+  // }
+
   return (
     <Container>
       <Title>ALTERAR SENHA</Title>
