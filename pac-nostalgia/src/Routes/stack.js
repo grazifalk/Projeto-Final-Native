@@ -1,8 +1,9 @@
 import React from "react";
-import {createNativeStackNavigator} from "@react-navigation/native-stack";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Login from "../screens/Login";
+import RememberPassword from "../screens/RememberPassword";
 
-const {Screen, Navigator} = createNativeStackNavigator();
+const { Screen, Navigator } = createNativeStackNavigator();
 
 export function StackRoutes() {
   return (
@@ -12,6 +13,7 @@ export function StackRoutes() {
       }}
     >
       <Screen name="Login" component={Login} />
+      <Screen name="RememberPassword" component={RememberPassword} />
     </Navigator>
   );
 }
