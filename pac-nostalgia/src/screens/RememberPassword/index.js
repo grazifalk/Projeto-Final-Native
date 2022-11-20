@@ -24,8 +24,8 @@ export default function RememberPassword() {
         placeholderTextColor={"grey"}
       />
 
-      <StButton onPress={screenChangePassword}>
-        <TextButton>RECUPERAR SENHA</TextButton>
+      <StButton>
+        <TextButton>ALTERAR SENHA</TextButton>
       </StButton>
       <StatusBar style="auto" />
     </Container>
