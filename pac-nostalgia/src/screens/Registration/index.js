@@ -1,16 +1,8 @@
 import { StatusBar } from "expo-status-bar";
 import { useState } from "react";
+import { TouchableOpacity } from "react-native";
 import { Container, TextButton, StButton, InputName,InputCPF,InputDate,InputPassword,InputConfirmPassword, Title } from "./styles";
-/*import {
-    Container,
-    TextButton,
-    StButton,
-    InputPassword,
-    
-    InputConfirmPassword,
-    Title,
-  } from "./styles.js";
-  */
+
 
 export default  function Registration () {
     const [user, setUser] = useState({
@@ -18,7 +10,7 @@ export default  function Registration () {
         cpf: '',
         date:'',
         password:'',
-        confirmPassword:'',
+        ConfirmPassword:'',
 
       });
 
@@ -26,7 +18,7 @@ export default  function Registration () {
       return (
         <Container>
                        
-          <Logo source={logo}/>      
+            
           <Title>CADASTRO</Title>
           <InputName
             value={user.name}
@@ -60,9 +52,11 @@ export default  function Registration () {
           />
      
         
-          <StButton>
+     
+     <StButton>
         <TextButton>CADASTRAR</TextButton>
       </StButton>
+        
 
     
           <StatusBar style="auto" />
