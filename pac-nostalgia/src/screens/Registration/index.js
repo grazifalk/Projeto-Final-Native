@@ -1,6 +1,8 @@
 import { StatusBar } from "expo-status-bar";
 import { useState } from "react";
 import { TouchableOpacity } from "react-native";
+import { Menu } from "../../components/Menu";
+import { useNavigation } from "@react-navigation/native";
 import {
   Container,
   TextButton,
@@ -22,9 +24,15 @@ export default function Registration() {
     ConfirmPassword: "",
   });
 
+  const navigation = useNavigation();
+
+  function screenLogin() {
+    navigation.navigate("Login");
+  }
   return (
     <Container>
       <Title>CADASTRO</Title>
+      
       <InputName
         value={user.name}
         onChangeText={setUser}
@@ -50,13 +58,13 @@ export default function Registration() {
         placeholderTextColor={"gray"}
       />
       <InputConfirmPassword
-        value={user.confirmPassword}
+        value={user.ConfirmPassword}
         onChangeText={setUser}
         placeholder={"Confirma a senha"}
         placeholderTextColor={"gray"}
       />
 
-      <StButton>
+      <StButton onPress={screenLogin}>
         <TextButton>CADASTRAR</TextButton>
       </StButton>
 

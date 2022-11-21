@@ -13,21 +13,22 @@ import styled from "styled-components/native";
         position: absolute;
         width: 390px;
         height: 86px;
-        padding-left: 70px;
-        padding-right: 70px;
-        padding-bottom: 10rem;
+        padding-left: 50px;
+        padding-right: 90px;
+        padding-bottom: 23rem;
         margin-top: 5px;
+        margin-left: 30px;
         bottom: 400px;
         font-family: "Inter";
         font-style: normal;
         font-weight: 700;
         font-size: 24px;
         line-height: 29px;
-        display: flex;
-        align-items: flex-end;
         text-align: center;
         color: #ffffff;
       `;
+        
+        
 
       export const InputName = styled.TextInput`
         width: 329px;
