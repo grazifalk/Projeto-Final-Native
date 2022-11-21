@@ -4,4 +4,5 @@ export default {
     tertiary: "#FFFFFF",
     textButtonColor: "#081D69",
     buttonColor: "#EBED17",
+    card: "#8eb3b3",
 }
