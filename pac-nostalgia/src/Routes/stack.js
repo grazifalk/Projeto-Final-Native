@@ -6,6 +6,7 @@ import RememberPassword from "../screens/RememberPassword/index.js";
 import ChangePassword from "../screens/ChangePassword/index.js";
 import Registration from "../screens/Registration/index.js";
 import PasswordChangedSuccess from "../screens/PasswordChangedSuccess/index.js";
+import UserRegistered from "../screens/UserRegistered";
 
 const { Screen, Navigator } = createNativeStackNavigator();
 
@@ -22,6 +23,7 @@ export function StackRoutes() {
       <Screen name="ChangePassword" component={ChangePassword} />
       <Screen name="PasswordChangedSuccess" component={PasswordChangedSuccess} />      
       <Screen name="Registration" component={Registration}/>
+      <Screen name="UserRegistered" component={UserRegistered}/>
     </Navigator>
   );
 }
