@@ -1,6 +1,5 @@
 import { StatusBar } from "expo-status-bar";
 import { useState } from "react";
-import { TouchableOpacity } from "react-native";
 import { Menu } from "../../components/Menu";
 import { useNavigation } from "@react-navigation/native";
 import {
@@ -26,8 +25,8 @@ export default function Registration() {
 
   const navigation = useNavigation();
 
-  function screenLogin() {
-    navigation.navigate("Login");
+  function screenUserRegistered() {
+    navigation.navigate("UserRegistered");
   }
   return (
     <Container>
@@ -64,7 +63,7 @@ export default function Registration() {
         placeholderTextColor={"gray"}
       />
 
-      <StButton onPress={screenLogin}>
+      <StButton onPress={screenUserRegistered}>
         <TextButton>CADASTRAR</TextButton>
       </StButton>
 
