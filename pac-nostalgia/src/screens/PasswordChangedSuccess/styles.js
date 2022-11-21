@@ -36,3 +36,22 @@ export const Message = styled.Text`
   margin-left: 50px;
   margin-right: 50px;
 `;
+
+export const StButton = styled.TouchableOpacity`
+  width: 303px;
+  height: 47px;
+  background: #ebed17;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  top: 50px;
+`;
+
+export const TextButton = styled.Text`
+  color: #081d69;
+  font-weight: 700;
+  font-size: 18px;
+  position: absolute;
+`;
