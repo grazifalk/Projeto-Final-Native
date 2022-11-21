@@ -2,6 +2,7 @@ import { StatusBar } from "expo-status-bar";
 import { useState } from "react";
 import { useNavigation } from "@react-navigation/native";
 import { Container, TextButton, StButton, InputLogin, Title } from "./styles";
+import { Menu } from "../../components/Menu";
 
 export default function RememberPassword() {
   const [user, setUser] = useState({
@@ -27,6 +28,7 @@ export default function RememberPassword() {
       <StButton onPress={screenChangePassword}>
         <TextButton>RECUPERAR SENHA</TextButton>
       </StButton>
+      <Menu />
       <StatusBar style="auto" />
     </Container>
   );

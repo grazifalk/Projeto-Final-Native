@@ -1,7 +1,6 @@
 import { StatusBar } from "expo-status-bar";
 import { useState } from "react";
 import { useNavigation } from "@react-navigation/native";
-import { TouchableOpacity } from "react-native";
 import {
   Container,
   TextButton,
@@ -11,6 +10,7 @@ import {
   InputConfirmPassword,
   Title,
 } from "./styles.js";
+import { Menu } from "../../components/Menu/index.js";
 
 export default function ChangePassword() {
   const [user, setUser] = useState({
@@ -19,11 +19,11 @@ export default function ChangePassword() {
     ConfirmPassword: "",
   });
 
-  // const navigation = useNavigation();
+  const navigation = useNavigation();
 
-  // function screenChangePassword() {
-  //   navigation.navigate("ChangePassword");
-  // }
+  function screenPasswordChangedSuccess() {
+    navigation.navigate("PasswordChangedSuccess");
+  }
 
   return (
     <Container>
@@ -47,9 +47,10 @@ export default function ChangePassword() {
         placeholder={"Digite novamente a nova Senha"}
         placeholderTextColor={"grey"}
       />
-      <StButton>
+      <StButton onPress={screenPasswordChangedSuccess}>
         <TextButton>ALTERAR SENHA</TextButton>
       </StButton>
+      <Menu />
       <StatusBar style="auto" />
     </Container>
   );
