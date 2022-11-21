@@ -12,6 +12,7 @@ import {
   InputPassword,
   Recover,
 } from "./styles";
+import { Menu } from "../../components/Menu";
 
 export default function Login() {
   const [user, setUser] = useState({
@@ -49,6 +50,7 @@ export default function Login() {
       <TouchableOpacity>
         <Recover>Não possui uma conta? Cadastre-se!</Recover>
       </TouchableOpacity>
+      <Menu />
       <StatusBar style="auto" />
     </Container>
   );
