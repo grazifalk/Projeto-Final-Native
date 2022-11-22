@@ -33,19 +33,19 @@ export default function ChangePassword() {
         value={user.Password}
         onChangeText={setUser}
         placeholder={"Digite a senha atual"}
-        placeholderTextColor={"grey"}
+        placeholderTextColor={"#ffffff"}
       />
       <InputNewPassword
         value={user.NewPassword}
         onChangeText={setUser}
         placeholder={"Digite a nova Senha"}
-        placeholderTextColor={"grey"}
+        placeholderTextColor={"#ffffff"}
       />
       <InputConfirmPassword
         value={user.ConfirmPassword}
         onChangeText={setUser}
         placeholder={"Digite novamente a nova Senha"}
-        placeholderTextColor={"grey"}
+        placeholderTextColor={"#ffffff"}
       />
       <StButton onPress={screenPasswordChangedSuccess}>
         <TextButton>ALTERAR SENHA</TextButton>

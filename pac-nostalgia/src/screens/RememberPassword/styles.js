@@ -1,4 +1,5 @@
 import styled from "styled-components/native";
+import colors from "../../themes/colors.js";
 
 export const Container = styled.View`
   flex: 1;
@@ -13,8 +14,7 @@ export const InputLogin = styled.TextInput`
   border-radius: 10px;
   padding-left: 10px;
   padding-right: 10px;
-  background: #ffffff;
-  opacity: 0.25;
+  background: ${colors.card};
   margin-top: 15px;
   margin-bottom: 10px;
   font-size: 16px;

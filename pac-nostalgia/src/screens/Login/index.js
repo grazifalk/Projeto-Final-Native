@@ -35,13 +35,13 @@ export default function Login() {
         value={user.login}
         onChangeText={setUser}
         placeholder={"E-mail, CPF ou CNPJ"}
-        placeholderTextColor={"grey"}
+        placeholderTextColor={"#ffffff"}
       />
       <InputPassword
         value={user.password}
         onChangeText={setUser}
         placeholder={"Senha"}
-        placeholderTextColor={"grey"}
+        placeholderTextColor={"#ffffff"}
       />
       <StButton>
         <TextButton>ENTRAR</TextButton>
