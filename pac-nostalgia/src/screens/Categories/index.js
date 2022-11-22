@@ -4,6 +4,7 @@ import { Api } from "../../services";
 import { FlatList } from "react-native";
 import { ItemCategory } from "../../components/ItemCategory/index.js";
 import { useState, useEffect } from "react";
+import { Menu } from "../../components/Menu";
 
 export const Categories = () => {
   const navigation = useNavigation();
@@ -27,14 +28,13 @@ export const Categories = () => {
   };
 
   return (
-    <MainContainer>
-      
-      
-      <FlatList
+    <MainContainer>      
+      <FlatList style={{marginTop: "100px"}}
         data={category}
         keyExtractor={(item) => item.id}
         renderItem={renderItem}
       />
+      <Menu />
     </MainContainer>
   );
 };
