@@ -22,7 +22,7 @@ export default function RememberPassword() {
         value={user.login}
         onChangeText={setUser}
         placeholder={"E-mail, CPF ou CNPJ"}
-        placeholderTextColor={"grey"}
+        placeholderTextColor={"#ffffff"}
       />
 
       <StButton onPress={screenChangePassword}>

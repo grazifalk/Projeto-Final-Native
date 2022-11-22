@@ -1,4 +1,5 @@
 import styled from "styled-components/native";
+import colors from "../../themes/colors.js";
 
 export const Container = styled.View`
   flex: 1;
@@ -13,8 +14,7 @@ export const InputPassword = styled.TextInput`
   border-radius: 10px;
   padding-left: 10px;
   padding-right: 10px;
-  background: #ffffff;
-  opacity: 0.25;
+  background: ${colors.card};
   margin-top: 10px;
   margin-bottom: 10px;
   font-size: 16px;
@@ -26,8 +26,7 @@ export const InputNewPassword = styled.TextInput`
   border-radius: 10px;
   padding-left: 10px;
   padding-right: 10px;
-  background: #ffffff;
-  opacity: 0.25;
+  background: ${colors.card};
   margin-top: 10px;
   margin-bottom: 10px;
   font-size: 16px;
@@ -39,8 +38,7 @@ export const InputConfirmPassword = styled.TextInput`
   border-radius: 10px;
   padding-left: 10px;
   padding-right: 10px;
-  background: #ffffff;
-  opacity: 0.25;
+  background: ${colors.card};
   margin-top: 10px;
   margin-bottom: 10px;
   font-size: 16px;

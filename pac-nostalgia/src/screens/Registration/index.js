@@ -31,36 +31,36 @@ export default function Registration() {
   return (
     <Container>
       <Title>CADASTRO</Title>
-      
+
       <InputName
         value={user.name}
         onChangeText={setUser}
         placeholder={"Nome Completo"}
-        placeholderTextColor={"gray"}
+        placeholderTextColor={"#ffffff"}
       />
       <InputCPF
         value={user.cpf}
         onChangeText={setUser}
         placeholder={"CPF/CNPJ"}
-        placeholderTextColor={"gray"}
+        placeholderTextColor={"#ffffff"}
       />
       <InputDate
         value={user.date}
         onChangeText={setUser}
         placeholder={"Data de Nascimento"}
-        placeholderTextColor={"gray"}
+        placeholderTextColor={"#ffffff"}
       />
       <InputPassword
         value={user.password}
         onChangeText={setUser}
         placeholder={"Senha"}
-        placeholderTextColor={"gray"}
+        placeholderTextColor={"#ffffff"}
       />
       <InputConfirmPassword
         value={user.ConfirmPassword}
         onChangeText={setUser}
         placeholder={"Confirma a senha"}
-        placeholderTextColor={"gray"}
+        placeholderTextColor={"#ffffff"}
       />
 
       <StButton onPress={screenUserRegistered}>
