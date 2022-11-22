@@ -1,7 +1,5 @@
-import { MainContainer } from "../../components/MainContainer/styles.js";
-import { Header } from "../../components/Header/index.js";
+import { MainContainer } from "./styles.js";
 import { useNavigation } from "@react-navigation/native";
-import { PlusButton } from "../../components/PlusButton/index.js";
 import { Api } from "../../services";
 import { FlatList } from "react-native";
 import { ItemCategory } from "../../components/ItemCategory/index.js";
@@ -30,8 +28,8 @@ export const Categories = () => {
 
   return (
     <MainContainer>
-      <Header title={"categorias"} iconName={"arrow-back"} goBack={goBack} />
-      <PlusButton onPress={() => navigation.navigate("CategoryRegister")} />
+      
+      
       <FlatList
         data={category}
         keyExtractor={(item) => item.id}
