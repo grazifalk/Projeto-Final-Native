@@ -17,7 +17,7 @@ export const Menu = () => {
         <TouchableOpacity onPress={() => navigation.navigate("Categories")}>  
         <Ionicons name={"list"} size={35} color={colors.tertiary} />
       </TouchableOpacity>
-      <TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation.navigate("Toys")}>
         <MaterialIcons name={"favorite"} size={35} color={colors.tertiary} />
       </TouchableOpacity>
       <TouchableOpacity onPress={() => navigation.navigate("Login")}>
