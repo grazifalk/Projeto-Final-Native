@@ -26,6 +26,7 @@ export const Photo = styled.Image`
 
 export const TextContainer = styled.View`
   width: 170px;
+  margin-top: 10px;
 `;
 
 export const Name = styled.Text`
