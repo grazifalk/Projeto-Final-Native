@@ -9,6 +9,7 @@ import PasswordChangedSuccess from "../screens/PasswordChangedSuccess/index.js";
 import UserRegistered from "../screens/UserRegistered";
 import { Categories } from "../screens/Categories";
 import Toys from "../screens/Toys";
+import { Products } from "../screens/Products";
 
 const { Screen, Navigator } = createNativeStackNavigator();
 
@@ -28,6 +29,7 @@ export function StackRoutes() {
       <Screen name="UserRegistered" component={UserRegistered} />
       <Screen name="Categories" component={Categories} />
       <Screen name="Toys" component={Toys} />
+      <Screen name="Products" component={Products} />
     </Navigator>
   );
 }
