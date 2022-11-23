@@ -4,7 +4,7 @@ export const ItemCategory = ({ name, photo }) => {
 
   return (
     <Card>
-      <Photo source={{ uri: photo }} />
+      <Photo source={{ uri: photo }} resizeMode="contain"/>
       <TextContainer>
         <Name>{name}</Name>
       </TextContainer>
