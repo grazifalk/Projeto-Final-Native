@@ -2,18 +2,15 @@ import React from 'react';
 import { View, Text } from 'react-native';
 import { useRoute } from "@react-navigation/native";
 import { useState, useEffect } from "react";
-import { Api } from '../../services';
+import { Api } from '../../Services';
 import { Menu } from '../../components/Menu';
-
-
+import {Container, Title, ProductImage, Price, Card, ContainerText} from "./styles.js"
 
 // import { Container } from './styles';
 
 export const Products = () => {
     const route = useRoute();
     const [produto, setProduto] = useState([]);
-    
-
   
     useEffect(() => {
       getProduto();
@@ -30,14 +27,17 @@ export const Products = () => {
             <>
                 {filtro?.map((prod)=>{
                     return(
-                        <View key={prod.id}>
-                            <Text>
+                        <Card key={prod.id}>
+                            <ProductImage source={prod.foto} />
+                            <ContainerText>
+                            <Title>
                                 {prod.nome}
-                            </Text>
-                            <Text>
-                                {prod.descricao}
-                            </Text>
-                        </View>
+                            </Title>
+                            <Price>
+                                R$ {prod.preco.toFixed(2)}
+                            </Price>
+                            </ContainerText>
+                        </Card>
                     )
                 })}
             </>
@@ -45,10 +45,9 @@ export const Products = () => {
     }
   return (
     <>
-    <View>
+    <Container>
          <ShowProduct />
-         
-    </View>
+    </Container>
     <Menu />
     </>
   )

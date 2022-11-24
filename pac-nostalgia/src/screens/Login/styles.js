@@ -3,7 +3,7 @@ import colors from "../../themes/colors.js";
 
 export const Container = styled.View`
   flex: 1;
-  background-color: #689999;
+  background-color: ${colors.primary};
   align-items: center;
   justify-content: center;
 `;
@@ -39,7 +39,7 @@ export const InputPassword = styled.TextInput`
 `;
 
 export const TextButton = styled.Text`
-  color: #081d69;
+  color: ${colors.textButtonColor};
   font-weight: 700;
   font-size: 18px;
   position: absolute;
@@ -48,7 +48,7 @@ export const TextButton = styled.Text`
 export const StButton = styled.TouchableOpacity`
   width: 329px;
   height: 47px;
-  background: #ebed17;
+  background: ${colors.buttonColor};
   border-radius: 10px;
   align-items: center;
   justify-content: center;
@@ -59,6 +59,6 @@ export const StButton = styled.TouchableOpacity`
 export const Recover = styled.Text`
   font-weight: 400;
   font-size: 18px;
-  color: #ffffff;
+  color: ${colors.tertiary};
   margin-bottom: 40px;
 `;

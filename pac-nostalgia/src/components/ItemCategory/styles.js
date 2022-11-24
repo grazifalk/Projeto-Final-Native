@@ -12,17 +12,18 @@ export const Card = styled.View`
   flex-direction: column;
   background-color: ${colors.card};
   width: 220px;
-  height: 125px;
+  height: 150px;
   border-radius: 10px;
   align-items: center;
   margin-bottom: 20px;
-  margin-top: 50px;
+  margin-top: 40px;
   padding-top: 15px;
 `;
 
 export const Photo = styled.Image`
   width: 60px;
   height: 60px;
+  margin-top: 15px;
 `;
 
 export const TextContainer = styled.View`
@@ -38,3 +39,6 @@ export const Name = styled.Text`
   text-align: center;
 `;
 
+export const PhotoContainer = styled.View`
+align-items: center;
+`;
