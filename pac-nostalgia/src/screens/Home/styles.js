@@ -14,7 +14,7 @@ export const Up = styled.View`
 
 export const Container = styled.View`
   flex: 1;
-  background-color: #689999;
+  background-color: ${colors.primary};
   align-items: center;
   justify-content: center;
 `;

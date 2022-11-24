@@ -3,28 +3,17 @@ import colors from "../../themes/colors.js";
 
 export const Container = styled.View`
   flex: 1;
-  background-color: #689999;
+  background-color: ${colors.primary};
   align-items: center;
   justify-content: center;
 `;
 
 export const Title = styled.Text`
-  position: absolute;
-  width: 390px;
-  height: 86px;
-  padding-left: 50px;
-  padding-right: 90px;
-  padding-bottom: 23rem;
-  margin-top: 5px;
-  margin-left: 30px;
-  bottom: 400px;
-  font-family: "Inter";
-  font-style: normal;
   font-weight: 700;
   font-size: 24px;
   line-height: 29px;
   text-align: center;
-  color: #ffffff;
+  color: ${colors.tertiary};
 `;
 
 export const InputName = styled.TextInput`
@@ -90,7 +79,7 @@ export const InputConfirmPassword = styled.TextInput`
 export const StButton = styled.TouchableOpacity`
   width: 329px;
   height: 47px;
-  background: #ebed17;
+  background: ${colors.buttonColor};
   border-radius: 10px;
   align-items: center;
   justify-content: center;
@@ -99,7 +88,7 @@ export const StButton = styled.TouchableOpacity`
 `;
 
 export const TextButton = styled.Text`
-  color: #081d69;
+  color: ${colors.textButtonColor};
   font-weight: 700;
   font-size: 18px;
   position: absolute;

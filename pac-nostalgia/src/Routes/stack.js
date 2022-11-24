@@ -8,7 +8,6 @@ import Registration from "../screens/Registration/index.js";
 import PasswordChangedSuccess from "../screens/PasswordChangedSuccess/index.js";
 import UserRegistered from "../screens/UserRegistered";
 import { Categories } from "../screens/Categories";
-import Toys from "../screens/Toys";
 import { Products } from "../screens/Products";
 
 
@@ -29,7 +28,6 @@ export function StackRoutes() {
       <Screen name="Registration" component={Registration}/>
       <Screen name="UserRegistered" component={UserRegistered} />
       <Screen name="Categories" component={Categories} />
-      <Screen name="Toys" component={Toys} />
       <Screen name="Products" component={Products} />
       
     </Navigator>
