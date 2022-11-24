@@ -1,6 +1,6 @@
 # Projeto-Final-Native
 
-
+<img src="https://media.discordapp.net/attachments/1008797656270782546/1045188651321151508/Figma.png" alt="FrontEnd Essencial"/>
 
 ## Autores
 
