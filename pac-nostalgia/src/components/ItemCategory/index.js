@@ -1,5 +1,5 @@
 import { TouchableOpacity } from "react-native";
-import { Card, Photo, TextContainer, Name } from "./styles";
+import { Card, Photo, TextContainer, Name, PhotoContainer } from "./styles";
 import { useNavigation } from "@react-navigation/native";
 
 export const ItemCategory = ({ name, photo }) => {
@@ -14,7 +14,9 @@ export const ItemCategory = ({ name, photo }) => {
   return (
     <Card>
       <TouchableOpacity onPress={screenProduto}>
+        <PhotoContainer>
       <Photo source={{ uri: photo }} resizeMode="contain"/>
+      </PhotoContainer>
       <TextContainer>
         <Name>{name}</Name>
       </TextContainer>
