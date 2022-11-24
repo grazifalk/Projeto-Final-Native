@@ -3,7 +3,7 @@ import colors from "../../themes/colors.js";
 
 export const Container = styled.View`
   flex: 1;
-  background-color: #689999;
+  background-color: ${colors.primary};
   align-items: center;
   justify-content: center;
 `;
@@ -21,7 +21,7 @@ export const InputLogin = styled.TextInput`
 `;
 
 export const TextButton = styled.Text`
-  color: #081d69;
+  color: ${colors.textButtonColor};
   font-weight: 700;
   font-size: 18px;
   position: absolute;
@@ -30,7 +30,7 @@ export const TextButton = styled.Text`
 export const StButton = styled.TouchableOpacity`
   width: 329px;
   height: 47px;
-  background: #ebed17;
+  background: ${colors.buttonColor};
   border-radius: 10px;
   align-items: center;
   justify-content: center;
@@ -39,22 +39,11 @@ export const StButton = styled.TouchableOpacity`
 `;
 
 export const Title = styled.Text`
-  position: absolute;
-  width: 390px;
-  height: 86px;
-  padding-left: 70px;
-  padding-right: 70px;
-  padding-bottom: 10rem;
-  margin-top: 5px;
-  bottom: 400px;
-  font-family: "Inter";
-  font-style: normal;
   font-weight: 700;
   font-size: 24px;
   line-height: 29px;
   display: flex;
   align-items: flex-end;
   text-align: center;
-
-  color: #ffffff;
+  color: ${colors.tertiary};
 `;

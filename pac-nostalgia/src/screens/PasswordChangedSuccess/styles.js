@@ -21,7 +21,6 @@ export const Card = styled.View`
 `;
 
 export const Message = styled.Text`
-  font-family: "Inter";
   font-weight: 700;
   font-size: 24px;
   line-height: 29px;
