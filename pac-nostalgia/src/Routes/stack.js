@@ -11,6 +11,7 @@ import { Categories } from "../screens/Categories";
 import Toys from "../screens/Toys";
 import { Products } from "../screens/Products";
 
+
 const { Screen, Navigator } = createNativeStackNavigator();
 
 export function StackRoutes() {
@@ -30,6 +31,7 @@ export function StackRoutes() {
       <Screen name="Categories" component={Categories} />
       <Screen name="Toys" component={Toys} />
       <Screen name="Products" component={Products} />
+      
     </Navigator>
   );
 }
