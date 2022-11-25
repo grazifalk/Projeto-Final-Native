@@ -15,3 +15,14 @@ export const Title = styled.Text`
   text-align: center;
   color: ${colors.tertiary};
 `;
+
+export const Up = styled.View`
+  width: 100%;
+  height: 77px;
+  background-color: ${colors.secondary};
+  flex-direction: row;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  justify-content: center;
+`;
