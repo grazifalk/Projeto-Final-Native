@@ -75,3 +75,15 @@ export const NewProduct = styled.Text`
   margin-left: 80px;
   margin-right: 50px;
 `;
+
+export const ContainerSlide = styled.View`
+  position: absolute;
+  width: 320px;
+  height: 270px;
+  left: 32px;
+  top: 420px;
+  border-radius: 10px;
+  background: ${colors.card};
+  align-items: center;
+  justify-content: center;
+`;
