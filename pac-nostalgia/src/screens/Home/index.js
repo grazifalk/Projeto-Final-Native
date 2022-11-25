@@ -1,11 +1,12 @@
 import { StatusBar } from "expo-status-bar";
-import { TouchableOpacity } from "react-native";
+import { TouchableOpacity, View } from "react-native";
 import { Container, Logo, Up, Message, Card, NewProduct } from "./styles";
 import { Menu } from "../../components/Menu";
 import LG from "../../../assets/LG.png";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import colors from "../../themes/colors.js";
 import { useNavigation } from "@react-navigation/native";
+import { Carousel } from "../../components/Carousel";
 
 export default function Home() {
   const navigation = useNavigation();
@@ -30,6 +31,7 @@ export default function Home() {
         </Message>
       </Card>
       <NewProduct>Novidades na nossa loja:</NewProduct>
+      <Carousel/>
       <Menu />
       <StatusBar style="auto" />
     </Container>
