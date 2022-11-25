@@ -4,16 +4,16 @@ import { useNavigation } from "@react-navigation/native";
 
 export const ItemCategory = ({ name, photo }) => {
   const navigation = useNavigation();
-  const screenProduto = ()=>{
+  const screenProduct = ()=>{
     
-    navigation.navigate("Products",{
+    navigation.navigate("Product",{
       name: name,
     })
   
   }
   return (
     <Card>
-      <TouchableOpacity onPress={screenProduto}>
+      <TouchableOpacity onPress={screenProduct}>
         <PhotoContainer>
       <Photo source={{ uri: photo }} resizeMode="contain"/>
       </PhotoContainer>

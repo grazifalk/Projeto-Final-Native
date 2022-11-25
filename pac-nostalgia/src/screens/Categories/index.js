@@ -1,5 +1,4 @@
 import { MainContainer } from "./styles.js";
-import { useNavigation } from "@react-navigation/native";
 import { Api } from "../../Services";
 import { FlatList } from "react-native";
 import { ItemCategory } from "../../components/ItemCategory/index.js";
@@ -7,7 +6,6 @@ import { useState, useEffect } from "react";
 import { Menu } from "../../components/Menu";
 
 export const Categories = () => {
-  const navigation = useNavigation();
   const [category, setCategory] = useState([]);
 
   const renderItem = ({ item }) => (
@@ -21,10 +19,6 @@ export const Categories = () => {
   const getCategories = async () => {
     const { data } = await Api.get("/categoria");
     setCategory(data);
-  };
-
-  function goBack() {
-    navigation.goBack();
   };
 
   return (
