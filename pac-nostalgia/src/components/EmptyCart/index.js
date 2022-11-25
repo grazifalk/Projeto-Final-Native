@@ -1,6 +1,6 @@
 import { StatusBar } from "expo-status-bar";
 import sad from "../../../assets/sad.png";
-import { Container, ImageSad, StButton, TextButton, Title, Up } from "./styles";
+import { Container, ImageSad, StButton, TextButton, Title } from "./styles";
 import { useNavigation } from "@react-navigation/native";
 
 export const EmptyCart = () => {
@@ -12,10 +12,6 @@ export const EmptyCart = () => {
 
   return (
     <>
-      <Up>
-        <Title>CARRINHO</Title>
-      </Up>
-
       <Container>
         <ImageSad source={sad} resizeMode="contain" />
         <Title>Seu carrinho está vazio :(</Title>

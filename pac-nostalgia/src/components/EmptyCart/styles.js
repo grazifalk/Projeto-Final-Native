@@ -2,7 +2,6 @@ import styled from "styled-components/native";
 import colors from "../../themes/colors";
 
 export const Container = styled.View`
-  flex: 1;
   background-color: ${colors.primary};
   align-items: center;
   justify-content: center;
@@ -39,17 +38,4 @@ export const StButton = styled.TouchableOpacity`
   justify-content: center;
   margin-top: 50px;
   margin-bottom: 20px;
-`;
-
-export const Up = styled.View`
-  width: 100%;
-  height: 77px;
-  background-color: ${colors.secondary};
-  flex-direction: row;
-  align-items: center;
-  position: absolute;
-  top: 0;
-  justify-content: space-between;
-  padding-right: 12px;
-  padding-left: 12px;
 `;
