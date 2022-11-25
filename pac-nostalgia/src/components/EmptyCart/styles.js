@@ -12,7 +12,7 @@ export const ImageSad = styled.Image`
   width: 232px;
   height: 170px;
   margin-bottom: 50px;
-`; 
+`;
 
 export const Title = styled.Text`
   font-weight: 700;
@@ -39,4 +39,17 @@ export const StButton = styled.TouchableOpacity`
   justify-content: center;
   margin-top: 50px;
   margin-bottom: 20px;
+`;
+
+export const Up = styled.View`
+  width: 100%;
+  height: 77px;
+  background-color: ${colors.secondary};
+  flex-direction: row;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  justify-content: space-between;
+  padding-right: 12px;
+  padding-left: 12px;
 `;
