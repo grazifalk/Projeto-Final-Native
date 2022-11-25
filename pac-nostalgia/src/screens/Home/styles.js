@@ -2,6 +2,7 @@ import styled from "styled-components/native";
 import colors from "../../themes/colors.js";
 
 export const Up = styled.View`
+  align-self: flex-start;
   width: 100%;
   height: 77px;
   background-color: ${colors.secondary};
@@ -9,8 +10,6 @@ export const Up = styled.View`
   align-items: center;
   position: absolute;
   top: 0;
-  justify-content: space-between;
-  padding-right: 12px;
 `;
 
 export const Container = styled.View`
