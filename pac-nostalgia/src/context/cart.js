@@ -3,15 +3,15 @@ import { createContext, useState } from "react";
 export const CartContext = createContext({});
 
 export const CartProvider = ({ children }) => {
-  const [produtoCarrinho, setProdutoCarrinho] = useState([]);
+  const [productCart, setProductCart] = useState([]);
 
-  function adcionandoItem(id, fotolink, nome, valor) {
-    const itemObject = [...produtoCarrinho];
-    const item = itemObject.find((produto) => produto.id === id);
+  function addItemCart(id, fotolink, nome, valor) {
+    const itemObject = [...productCart];
+    const item = itemObject.find((product) => product.id === id);
     if (!item) {
       itemObject.push({
         id: id,
-        fotoLink:fotolink,
+        fotoLink: fotolink,
         nome: nome,
         valor: valor,
         quantidade: 1,
@@ -19,42 +19,42 @@ export const CartProvider = ({ children }) => {
     } else {
       item.quantidade = item.quantidade + 1;
     }
-    setProdutoCarrinho(itemObject);
+    setProductCart(itemObject);
     
   }
 
-  function removendoItemCarrinho(id) {
-    const itemObject = [...produtoCarrinho];
-    const item = itemObject.find((produto) => produto.id === id);
+  function removeItemCart(id) {
+    const itemObject = [...productCart];
+    const item = itemObject.find((product) => product.id === id);
 
-    if (item && item.quantidade > 1) {
-      item.quantidade = item.quantidade - 1;
-      setProdutoCarrinho(itemObject);
+    if (item && item.quantity > 1) {
+      item.quantity = item.quantity - 1;
+      setProductCart(itemObject);
     } else {
-      const arrayFiltered = itemObject.filter((produto) => produto.id !== id);
-      setProdutoCarrinho(arrayFiltered);
+      const arrayFiltered = itemObject.filter((product) => product.id !== id);
+      setProductCart(arrayFiltered);
     }
   }
 
-  function removendoItem(id){
-    const itemObject = [...produtoCarrinho];
+  function removalItem(id){
+    const itemObject = [...productCart];
 
-    const arrayFiltered = itemObject.filter((produto)=>produto.id !==id)
-    setProdutoCarrinho(arrayFiltered)
+    const arrayFiltered = itemObject.filter((product)=>product.id !==id)
+    setProductCart(arrayFiltered)
   }
 
-  function limpandoCarrinho(){
-    setProdutoCarrinho([])
+  function clearCart(){
+    setProductCart([])
   }
 
   return (
     <CartContext.Provider
         value={{
-            produtoCarrinho,
-            adcionandoItem,
-            removendoItemCarrinho,
-            removendoItem,
-            limpandoCarrinho,
+            productCart,
+            addItemCart,
+            removeItemCart,
+            removalItem,
+            clearCart,
         }}>
             {children}
     </CartContext.Provider>
