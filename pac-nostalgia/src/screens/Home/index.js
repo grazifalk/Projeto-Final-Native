@@ -1,6 +1,14 @@
 import { StatusBar } from "expo-status-bar";
 import { TouchableOpacity, View } from "react-native";
-import { Container, Logo, Up, Message, Card, NewProduct } from "./styles";
+import {
+  Container,
+  Logo,
+  Up,
+  Message,
+  Card,
+  NewProduct,
+  ContainerSlide,
+} from "./styles";
 import { Menu } from "../../components/Menu";
 import LG from "../../../assets/LG.png";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
@@ -31,7 +39,9 @@ export default function Home() {
         </Message>
       </Card>
       <NewProduct>Novidades na nossa loja:</NewProduct>
-      <Carousel/>
+      <ContainerSlide>
+        <Carousel />
+      </ContainerSlide>
       <Menu />
       <StatusBar style="auto" />
     </Container>
