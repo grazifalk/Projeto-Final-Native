@@ -3,7 +3,7 @@ import colors from "../../themes/colors.js";
 
 export const Container = styled.View`
   flex: 1;
-  background-color: #689999;
+  background-color: ${colors.primary};
   align-items: center;
   justify-content: center;
 `;
@@ -26,7 +26,6 @@ export const Fireworks = styled.Image`
 `;
 
 export const Message = styled.Text`
-  font-family: "Inter";
   font-weight: 700;
   font-size: 24px;
   line-height: 29px;
