@@ -11,8 +11,13 @@ import {
   Price,
   Card,
   ContainerText,
+  Up,
+  TitleTwo,
 } from "./styles.js";
 import { TouchableOpacity } from "react-native";
+import { Feather } from "@expo/vector-icons";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
+import colors from "../../themes/colors";
 
 export const Product = () => {
   const route = useRoute();
@@ -57,6 +62,20 @@ export const Product = () => {
   return (
     <>
       <Container>
+        <Up>
+          <TouchableOpacity onPress={() => navigation.navigate("Home")}>
+            {/* /*fazer rota search*\ */}
+            <Feather name="search" size={35} color={colors.tertiary} />
+          </TouchableOpacity>
+          <TitleTwo>PRODUTOS</TitleTwo>
+          <TouchableOpacity onPress={() => navigation.navigate("Cart")}>
+            <MaterialCommunityIcons
+              name="cart-outline"
+              size={35}
+              color={colors.tertiary}
+            />
+          </TouchableOpacity>
+        </Up>
         <TouchableOpacity onPress={screenProductDetails}>
           <ShowProduct />
         </TouchableOpacity>
