@@ -58,7 +58,7 @@ export const Carousel = () => {
                 </View>
                 <View
                   style={{
-                    width,
+                    // width,
                     alignItems: "center",
                     justifyContent: "center",
                   }}
@@ -69,7 +69,7 @@ export const Carousel = () => {
                       height: "163px",
                       resizeMode: "cover",
                       borderRadius: 16,
-                      opacity,
+                      // opacity,
                     }}
                     source={{ uri: item }}
                   />
