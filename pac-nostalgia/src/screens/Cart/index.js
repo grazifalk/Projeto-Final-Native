@@ -14,8 +14,7 @@ export const Cart = () => {
         <Up>
           <Title>CARRINHO</Title>
         </Up>
-        {productCart.length == 0 && <EmptyCart /> }
-        <ProductsCart />
+        {productCart.length == 0 && <EmptyCart />}
         <Menu />
       </Container>
     </>
