@@ -13,12 +13,28 @@ import {
   Recover,
 } from "./styles";
 import { Menu } from "../../components/Menu";
+import {Api} from "../../Services";
 
 export default function Login() {
-  const [user, setUser] = useState({
-    login: "",
-    password: "",
-  });
+  const [login, setLogin] = useState("")
+  const [password, setPassword] = useState("")
+
+  const logar = () => {
+    console.log("logando")
+
+    Api.get(`usuario/login?login=${login}&senha=${password}`)
+       .then((res) => {
+        if(res.data !== "Login e/ou senha inválidos.") {
+            navigation.navigate("User", {login: login, password: password})
+            console.log("logou")
+        }
+        else{
+          alert("errou") 
+        }
+       }).catch((err) => {
+        console.log(err)
+       });
+};
 
   const navigation = useNavigation();
 
@@ -32,18 +48,18 @@ export default function Login() {
     <Container>
       <Logo source={logo} />
       <InputLogin
-        value={user.login}
-        onChangeText={setUser}
-        placeholder={"E-mail, CPF ou CNPJ"}
+        value={login}
+        onChangeText={(data)=>setLogin(data)}
+        placeholder={"Login"}
         placeholderTextColor={"#ffffff"}
       />
       <InputPassword
-        value={user.password}
-        onChangeText={setUser}
+        value={password}
+        onChangeText={(data)=>setPassword(data)}
         placeholder={"Senha"}
         placeholderTextColor={"#ffffff"}
       />
-      <StButton>
+      <StButton onPress={logar}>
         <TextButton>ENTRAR</TextButton>
       </StButton>
       <TouchableOpacity onPress={screenRememberPassword}>

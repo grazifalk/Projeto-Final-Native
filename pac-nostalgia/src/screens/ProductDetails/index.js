@@ -1,10 +1,10 @@
 import { AntDesign } from "@expo/vector-icons";
 import { useRoute } from "@react-navigation/native";
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Text } from "react-native";
 import { Menu } from "../../components/Menu";
 import { Modal } from "../../components/Modal";
-import { CartContext } from "../../context/Cart";
+import { CartContext } from "../../context/cart";
 import { Api } from "../../Services";
 import {
   CardProduct,
@@ -19,23 +19,31 @@ export const ProductDetails = () => {
   const { addItemCart } = useContext(CartContext);
   const [popup, setPopup] = useState(false);
   const route = useRoute();
-  const { data } = Api(`/produto/${route.params.id}`);
+  const [data, setData] = useState();
 
-  const addCart = () => {
-    addItemCart(data.id, data.foto, data.nome, data.preco);
+  const addCart = (id, foto, nome, preco) => {
+    console.log(id, foto, nome, preco);
+    addItemCart(id, foto, nome, preco)
     setPopup(true);
   };
+
+  useEffect(() => {
+    Api.get(`/produto/${route.params.id}`).then((response) => {
+      setData(response.data);
+    });
+  }, []);
 
   const ShowProduct = () => {
     return (
       <Container>
         <CardProduct>
-          <ProductImage source={{ uri: data.foto }} resizeMode="contain" />
-          <ProductText>{data.nome}</ProductText>
-          <ProductText>{data.descricao}</ProductText>
-          <ProductText>R$ {data.preco.toFixed(2)}</ProductText>
+          <ProductImage source={{ uri: data?.foto }} resizeMode="contain" />
+          <ProductText>{data?.nome}</ProductText>
+          <ProductText>{data?.descricao}</ProductText>
+          <ProductText>R$ {data?.preco.toFixed(2)}</ProductText>
         </CardProduct>
-        <StButton onPress={addCart}>
+        <StButton onPress={() => addCart(data.id, data.foto, data.nome, data.preco)
+         }>
           <TextButton>COMPRAR</TextButton>
         </StButton>
       </Container>
