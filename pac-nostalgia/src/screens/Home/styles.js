@@ -42,7 +42,7 @@ export const Card = styled.View`
 export const Message = styled.Text`
   font-family: "Inter";
   font-weight: 500;
-  font-size: 19px;
+  font-size: 22px;
   line-height: 23px;
   display: flex;
   align-items: center;

@@ -22,6 +22,8 @@ export const PopupInner = styled.View`
   max-width: 640px;
   background: ${colors.card};
   border-radius: 10px;
+  border: solid 3px ${colors.textButtonColor};
+
 `;
 
 export const ButtonClose = styled.TouchableOpacity`
