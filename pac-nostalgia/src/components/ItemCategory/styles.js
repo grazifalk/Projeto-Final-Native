@@ -33,12 +33,12 @@ export const TextContainer = styled.View`
 
 export const Name = styled.Text`
   color: ${colors.tertiary};
-  font-family: 'Inter';
+  font-family: "Inter";
   font-weight: 400;
   font-size: 24px;
   text-align: center;
 `;
 
 export const PhotoContainer = styled.View`
-align-items: center;
+  align-items: center;
 `;

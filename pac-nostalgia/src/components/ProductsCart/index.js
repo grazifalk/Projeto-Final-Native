@@ -5,7 +5,6 @@ import {
   Container,
   ImageProduct,
   ImageContainer,
-  ProductContainer,
   Title,
   ContainerCard,
   StButton,
@@ -34,11 +33,10 @@ export const ProductsCart = () => {
                     <ImageContainer>
                       <ImageProduct source={item.foto} resizeMode="contain" />
                     </ImageContainer>
-                    <ProductContainer>
-                      <Title>{item.nome}</Title>
-                      <Title>R$ {item.valor.toFixed(2)}</Title>
-                      <Title>{item.quantidade}</Title>
-                    </ProductContainer>
+
+                    <Title>{item.nome}</Title>
+                    <Title>R$ {item.valor.toFixed(2)}</Title>
+                    <Title>{item.quantidade}</Title>
                   </ContainerCard>
                 </TouchableOpacity>
               </Container>

@@ -16,6 +16,8 @@ import {
   StButton,
   TextButton,
   Title,
+  TitleTwo,
+  Up,
 } from "./styles";
 
 export const ProductDetails = () => {
@@ -39,12 +41,16 @@ export const ProductDetails = () => {
   const ShowProduct = () => {
     return (
       <Container>
+        <Up>
+          <TitleTwo>DESCRIÇÃO PRODUTO</TitleTwo>
+        </Up>
+
         <CardProduct>
           <ProductImage source={{ uri: data?.foto }} resizeMode="contain" />
           <ContainerText>
-          <ProductText>{data?.nome}</ProductText>
-          <ProductText>{data?.descricao}</ProductText>
-          <ProductText>R$ {data?.preco.toFixed(2)}</ProductText>
+            <ProductText>{data?.nome}</ProductText>
+            <ProductText>{data?.descricao}</ProductText>
+            <ProductText>R$ {data?.preco.toFixed(2)}</ProductText>
           </ContainerText>
         </CardProduct>
         <StButton
