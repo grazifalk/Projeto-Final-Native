@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import { EmptyCart } from "../../components/EmptyCart";
 import { Menu } from "../../components/Menu";
 import { ProductsCart } from "../../components/ProductsCart";
-
 import { CartContext } from "../../context/cart";
 import { Container, Title, Up } from "./styles";
 

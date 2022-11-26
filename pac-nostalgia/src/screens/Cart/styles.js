@@ -25,4 +25,6 @@ export const Up = styled.View`
   position: absolute;
   top: 0;
   justify-content: center;
+  padding-left: 50px;
+  padding-right: 50px;
 `;

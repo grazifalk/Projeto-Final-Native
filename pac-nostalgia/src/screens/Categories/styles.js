@@ -16,9 +16,9 @@ export const Up = styled.View`
   align-items: center;
   position: absolute;
   top: 0;
-  justify-content: space-between;
-  padding-right: 12px;
-  padding-left: 12px;
+  justify-content: center;
+  padding-left: 50px;
+  padding-right: 50px;
 `;
 
 export const Title = styled.Text`

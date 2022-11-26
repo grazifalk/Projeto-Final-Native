@@ -1,11 +1,20 @@
 import { StatusBar } from "expo-status-bar";
 import { Text, TouchableOpacity, View } from "react-native";
-import { Container, Logo, Up, Message, Card, NewProduct } from "./styles";
 import { Menu } from "../../components/Menu";
 import LG from "../../../assets/LG.png";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import colors from "../../themes/colors.js";
 import { useRoute } from "@react-navigation/native";
+import {
+  Container,
+  Logo,
+  Up,
+  Message,
+  Card,
+  NewProduct,
+  ContainerSlide,
+} from "./styles";
+import { useNavigation } from "@react-navigation/native";
 import { Carousel } from "../../components/Carousel";
 import {Api} from "../../Services";
 import { useEffect, useState } from "react";
@@ -18,13 +27,6 @@ export default function Home({navigation}) {
     <Container>
       <Up>
         <Logo source={LG} resizeMode="contain" />
-        <TouchableOpacity onPress={() => navigation.navigate("Cart")}>
-          <MaterialCommunityIcons
-            name="cart-outline"
-            size={35}
-            color={colors.tertiary}
-          />
-        </TouchableOpacity>
       </Up>
       <Card>
         <Message>
@@ -36,7 +38,9 @@ export default function Home({navigation}) {
         </Message>
       </Card>
       <NewProduct>Novidades na nossa loja:</NewProduct>
-      <Carousel/>
+      <ContainerSlide>
+        <Carousel />
+      </ContainerSlide>
       <Menu />
       <StatusBar style="auto" />
     </Container>

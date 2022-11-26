@@ -9,8 +9,8 @@ export const Up = styled.View`
   align-items: center;
   position: absolute;
   top: 0;
-  justify-content: space-between;
-  padding-right: 12px;
+  padding-left: 50px;
+  padding-right: 50px;
 `;
 
 export const Container = styled.View`
@@ -22,8 +22,8 @@ export const Container = styled.View`
 
 export const Logo = styled.Image`
   top: 0.1px;
-  width: 200px;
-  height: 250px;
+  width: 300px;
+  height: 90px;
 `;
 
 export const Card = styled.View`
@@ -74,4 +74,16 @@ export const NewProduct = styled.Text`
   top: 350px;
   margin-left: 80px;
   margin-right: 50px;
+`;
+
+export const ContainerSlide = styled.View`
+  position: absolute;
+  width: 320px;
+  height: 270px;
+  left: 32px;
+  top: 420px;
+  border-radius: 10px;
+  background: ${colors.card};
+  align-items: center;
+  justify-content: center;
 `;

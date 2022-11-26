@@ -65,18 +65,7 @@ export const Product = () => {
     <>
       <Container>
         <Up>
-          <TouchableOpacity onPress={() => navigation.navigate("Home")}>
-            {/* /*fazer rota search*\ */}
-            <Feather name="search" size={35} color={colors.tertiary} />
-          </TouchableOpacity>
           <TitleTwo>PRODUTOS</TitleTwo>
-          <TouchableOpacity onPress={() => navigation.navigate("Cart")}>
-            <MaterialCommunityIcons
-              name="cart-outline"
-              size={35}
-              color={colors.tertiary}
-            />
-          </TouchableOpacity>
         </Up>
 
         <ShowProduct />

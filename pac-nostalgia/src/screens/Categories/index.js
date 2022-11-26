@@ -4,10 +4,6 @@ import { FlatList, View } from "react-native";
 import { ItemCategory } from "../../components/ItemCategory/index.js";
 import { useState, useEffect } from "react";
 import { Menu } from "../../components/Menu";
-import { Feather } from "@expo/vector-icons";
-import { MaterialCommunityIcons } from "@expo/vector-icons";
-import { TouchableOpacity } from "react-native";
-import colors from "../../themes/colors";
 import { useNavigation } from "@react-navigation/native";
 
 export const Categories = () => {
@@ -30,18 +26,7 @@ export const Categories = () => {
   return (
     <MainContainer>
       <Up>
-        <TouchableOpacity onPress={() => navigation.navigate("Home")}>
-          {/* /*fazer rota search*\ */}
-          <Feather name="search" size={35} color={colors.tertiary} />
-        </TouchableOpacity>
         <Title>CATEGORIA</Title>
-        <TouchableOpacity onPress={() => navigation.navigate("Cart")}>
-          <MaterialCommunityIcons
-            name="cart-outline"
-            size={35}
-            color={colors.tertiary}
-          />
-        </TouchableOpacity>
       </Up>
       <FlatList
         style={{ marginTop: "100px" }}
