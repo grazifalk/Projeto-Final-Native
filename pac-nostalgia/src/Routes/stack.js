@@ -13,7 +13,6 @@ import { Cart } from "../screens/Cart";
 import { ProductDetails } from "../screens/ProductDetails";
 import { User } from "../screens/User";
 
-
 const { Screen, Navigator } = createNativeStackNavigator();
 
 export function StackRoutes() {
@@ -39,6 +38,7 @@ export function StackRoutes() {
       <Screen name="Cart" component={Cart} />
       <Screen name="ProductDetails" component={ProductDetails} />
       <Screen name="User" component={User} />
+
 
     </Navigator>
   );

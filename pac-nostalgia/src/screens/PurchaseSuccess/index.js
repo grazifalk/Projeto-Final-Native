@@ -1,11 +1,7 @@
 import { StatusBar } from "expo-status-bar";
-import {
-    Container,
-    Card,
-    Message,
-} from "./styles.js";
+import {Card, Container, Fireworks, Message} from "./styles.js";
 import { Menu } from "../../components/Menu";
-import { Fireworks } from "./style.js";
+import { fireworks } from "../../../assets/fireworks.svg";
 
 export default function PurchaseSuccess() {
 

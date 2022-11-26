@@ -3,11 +3,13 @@ import { TouchableOpacity } from "react-native";
 import { CartContext } from "../../context/cart";
 import {
   Container,
-  Content,
   ImageProduct,
   ImageContainer,
-  ProductContent,
+  ProductContainer,
   Title,
+  ContainerCard,
+  StButton,
+  TextButton,
 } from "./styles";
 
 export const ProductsCart = () => {
@@ -26,21 +28,26 @@ export const ProductsCart = () => {
         {productCart?.map((item) => {
           return (
             <>
-              <TouchableOpacity onPress={screenProductDetails}>
-                <Content key={item.id}>
-                  <ImageContainer>
-                    <ImageProduct source={item.foto} resizeMode="contain" />
-                  </ImageContainer>
-                  <ProductContent>
-                    <Title>{item.nome}</Title>
-                    <Title>R$ {item.valor.toFixed(2)}</Title>
-                    <Title>{item.quantidade}</Title>
-                  </ProductContent>
-                </Content>
-              </TouchableOpacity>
+              <Container key={item.id}>
+                <TouchableOpacity onPress={screenProductDetails}>
+                  <ContainerCard>
+                    <ImageContainer>
+                      <ImageProduct source={item.foto} resizeMode="contain" />
+                    </ImageContainer>
+                    <ProductContainer>
+                      <Title>{item.nome}</Title>
+                      <Title>R$ {item.valor.toFixed(2)}</Title>
+                      <Title>{item.quantidade}</Title>
+                    </ProductContainer>
+                  </ContainerCard>
+                </TouchableOpacity>
+              </Container>
             </>
-          )
+          );
         })}
+        <StButton>
+          <TextButton>COMPRAR</TextButton>
+        </StButton>
       </Container>
     </>
   );

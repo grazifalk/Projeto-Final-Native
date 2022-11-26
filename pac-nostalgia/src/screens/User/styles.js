@@ -1,7 +1,7 @@
 import styled from "styled-components/native";
 import colors from "../../themes/colors.js";
 
-export const MainContainer = styled.View`
+export const Container = styled.View`
   flex: 1;
   background-color: ${colors.primary};
   align-items: center;
@@ -16,9 +16,9 @@ export const Up = styled.View`
   align-items: center;
   position: absolute;
   top: 0;
-  justify-content: space-between;
-  padding-right: 12px;
-  padding-left: 12px;
+  justify-content: center;
+  padding-left: 50px;
+  padding-right: 50px;
 `;
 
 export const Title = styled.Text`
@@ -28,3 +28,33 @@ export const Title = styled.Text`
   text-align: center;
   color: ${colors.tertiary};
 `;
+
+export const TextButton = styled.Text`
+  color: ${colors.textButtonColor};
+  font-weight: 700;
+  font-size: 18px;
+  position: absolute;
+`;
+
+export const StButton = styled.TouchableOpacity`
+  width: 329px;
+  height: 47px;
+  background: ${colors.buttonColor};
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+`;
+
+// export const Card = styled.View`
+//   position: absolute;
+//   width: 329px;
+//   height: 363px;
+//   left: 32px;
+//   top: 190px;
+//   border-radius: 10px;
+//   background: ${colors.card};
+//   align-items: center;
+//   justify-content: center;
+// `;
