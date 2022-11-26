@@ -36,6 +36,7 @@ export const Card = styled.View`
   background: ${colors.card};
   align-items: center;
   justify-content: center;
+  margin-top: 30px;
 `;
 
 export const Message = styled.Text`
@@ -74,6 +75,7 @@ export const NewProduct = styled.Text`
   top: 350px;
   margin-left: 80px;
   margin-right: 50px;
+  margin-top: 20px;
 `;
 
 export const ContainerSlide = styled.View`
@@ -86,4 +88,5 @@ export const ContainerSlide = styled.View`
   background: ${colors.card};
   align-items: center;
   justify-content: center;
+  margin-top: 25px;
 `;
