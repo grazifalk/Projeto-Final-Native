@@ -4,6 +4,7 @@ import { Ionicons } from "@expo/vector-icons";
 import { FontAwesome } from "@expo/vector-icons";
 import { Container } from "./styles.js";
 import { useNavigation } from "@react-navigation/native";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 export const Menu = () => {
   const navigation = useNavigation();
@@ -15,6 +16,13 @@ export const Menu = () => {
       </TouchableOpacity>
       <TouchableOpacity onPress={() => navigation.navigate("Categories")}>
         <Ionicons name={"list"} size={35} color={colors.tertiary} />
+      </TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation.navigate("Cart")}>
+        <MaterialCommunityIcons
+          name="cart-outline"
+          size={35}
+          color={colors.tertiary}
+        />
       </TouchableOpacity>
       <TouchableOpacity onPress={() => navigation.navigate("Login")}>
         <FontAwesome name={"user-circle-o"} size={35} color={colors.tertiary} />
