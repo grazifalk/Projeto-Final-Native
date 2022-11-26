@@ -9,12 +9,10 @@ export const Container = styled.View`
 `;
 
 export const CardProduct = styled.View`
-  position: absolute;
   width: 352.08px;
-  height: 320.67px;
-  justify-content: center;
+  height: 335px;
+  border-radius: 10px;
   align-items: center;
-  margin-bottom: 28px;
   background: ${colors.card};
 `;
 
@@ -35,10 +33,10 @@ export const ProductText = styled.Text`
   margin-bottom: 10px;
 `;
 
-// export const ContainerText = styled.View`
-//   top: 180px;
-//   text-align: center;
-// `;
+export const ContainerText = styled.View`
+  top: 180px;
+  text-align: center;
+`;
 
 export const StButton = styled.TouchableOpacity`
   width: 303px;
