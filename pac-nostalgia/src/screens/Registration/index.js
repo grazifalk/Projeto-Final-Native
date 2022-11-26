@@ -13,57 +13,94 @@ import {
   InputConfirmPassword,
   Title,
 } from "./styles";
+import {Api} from "../../Services";
 
 export default function Registration() {
-  const [user, setUser] = useState({
-    name: "",
-    cpf: "",
-    date: "",
-    password: "",
-    ConfirmPassword: "",
-  });
+  const [ativo, setAtivo] = useState(true)
+  const [cpf, setCpf] = useState("")
+  const [nascimento, setNascimento] = useState("")
+  const [login, setLogin] = useState("")
+  const [nome, setNome] = useState("")
+  const [senha, setSenha] = useState("")
+  const [image, setImage] = useState("")
 
   const navigation = useNavigation();
 
   function screenUserRegistered() {
     navigation.navigate("UserRegistered");
   }
+
+  const addPost = () => {
+    const data = {
+      ativo: ativo,
+      cpf: cpf,
+      dtNascimento: nascimento,
+      foto: image,
+      login: login,
+      nome: nome,
+      senha: senha
+      }
+
+    Api.post("/usuario", data)
+       .then((res) => {
+        console.log(res.data)
+       }).catch((err) => {
+        console.log(err)
+       });
+};
+
   return (
     <Container>
       <Title>CADASTRO</Title>
 
       <InputName
-        value={user.name}
-        onChangeText={setUser}
-        placeholder={"Nome Completo"}
+        value={nome}
+        onChangeText={(data)=>setNome(data)}
+        placeholder="Nome Completo"
         placeholderTextColor={"#ffffff"}
       />
       <InputCPF
-        value={user.cpf}
-        onChangeText={setUser}
-        placeholder={"CPF/CNPJ"}
+        value={cpf}
+        onChangeText={(data)=>setCpf(data)}
+        placeholder="CPF/CNPJ"
         placeholderTextColor={"#ffffff"}
       />
       <InputDate
-        value={user.date}
-        onChangeText={setUser}
-        placeholder={"Data de Nascimento"}
+        value={nascimento}
+        onChangeText={(data)=>setNascimento(data)}
+        placeholder="Data de Nascimento"
         placeholderTextColor={"#ffffff"}
       />
       <InputPassword
-        value={user.password}
-        onChangeText={setUser}
-        placeholder={"Senha"}
+        value={senha}
+        onChangeText={(data)=>setSenha(data)}
+        placeholder="Senha"
         placeholderTextColor={"#ffffff"}
       />
       <InputConfirmPassword
-        value={user.ConfirmPassword}
-        onChangeText={setUser}
-        placeholder={"Confirma a senha"}
+        placeholder="Confirma a senha"
+        placeholderTextColor={"#ffffff"}
+      />
+            <InputName
+        value={image}
+        onChangeText={(data)=>setImage(data)}
+        placeholder="Imagem"
+        placeholderTextColor={"#ffffff"}
+      />
+            <InputName
+        value={ativo}
+        onChangeText={(data)=>setAtivo(data)}
+        placeholder="Ativo"
+        placeholderTextColor={"#ffffff"}
+      />
+            <InputName
+        value={login}
+        onChangeText={(data)=>setLogin(data)}
+        placeholder="Login"
         placeholderTextColor={"#ffffff"}
       />
 
-      <StButton onPress={screenUserRegistered}>
+      <StButton onPress={addPost}>
         <TextButton>CADASTRAR</TextButton>
       </StButton>
 

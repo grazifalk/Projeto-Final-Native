@@ -15,8 +15,10 @@ border-radius: 10px;
 background: ${colors.card};
 `;
 
-export const ImageContainer = styled.Image`
-
+export const ImageContainer = styled.View`
+width: 97.68px;
+height: 88.99px;
+border-radius: 10px;
 `;
 
 export const ImageProduct = styled.Image`

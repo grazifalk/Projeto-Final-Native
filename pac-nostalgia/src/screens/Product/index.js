@@ -24,9 +24,9 @@ export const Product = () => {
   const [produto, setProduto] = useState([]);
   const navigation = useNavigation();
 
-  const screenProductDetails = () => {
+  const screenProductDetails = (idProduto) => {
     navigation.navigate("ProductDetails", {
-      id: id,
+      id: idProduto,
     });
   };
 
@@ -47,13 +47,15 @@ export const Product = () => {
       <>
         {filtro?.map((prod) => {
           return (
-            <Card key={prod.id}>
-              <ProductImage source={prod.foto} />
-              <ContainerText>
-                <Title>{prod.nome}</Title>
-                <Price>R$ {prod.preco.toFixed(2)}</Price>
-              </ContainerText>
-            </Card>
+            <TouchableOpacity key={prod.id} onPress={() => screenProductDetails(prod.id)}>
+              <Card >
+                <ProductImage source={prod.foto} />
+                <ContainerText>
+                  <Title>{prod.nome}</Title>
+                  <Price>R$ {prod.preco.toFixed(2)}</Price>
+                </ContainerText>
+              </Card>
+            </TouchableOpacity>
           );
         })}
       </>
@@ -65,9 +67,8 @@ export const Product = () => {
         <Up>
           <TitleTwo>PRODUTOS</TitleTwo>
         </Up>
-        <TouchableOpacity onPress={screenProductDetails}>
-          <ShowProduct />
-        </TouchableOpacity>
+
+        <ShowProduct />
       </Container>
       <Menu />
     </>
