@@ -9,6 +9,7 @@ import { Api } from "../../Services";
 import {
   CardProduct,
   Container,
+  ContainerText,
   Message,
   ProductImage,
   ProductText,
@@ -40,9 +41,11 @@ export const ProductDetails = () => {
       <Container>
         <CardProduct>
           <ProductImage source={{ uri: data?.foto }} resizeMode="contain" />
+          <ContainerText>
           <ProductText>{data?.nome}</ProductText>
           <ProductText>{data?.descricao}</ProductText>
           <ProductText>R$ {data?.preco.toFixed(2)}</ProductText>
+          </ContainerText>
         </CardProduct>
         <StButton
           onPress={() => addCart(data.id, data.foto, data.nome, data.preco)}

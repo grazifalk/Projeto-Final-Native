@@ -41,6 +41,7 @@ export const Card = styled.View`
   background: ${colors.card};
   align-items: center;
 `;
+
 export const ContainerText = styled.View`
   top: 180px;
   text-align: center;
