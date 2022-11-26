@@ -9,11 +9,8 @@ export const PopupContainer = styled.View`
   position: absolute;
   padding-left: 20px;
   padding-right: 20px;
-
   background: rgba(0, 0, 0, 0.2);
-
   display: flex;
-
   justify-content: center;
   align-items: center;
 `;
@@ -23,13 +20,13 @@ export const PopupInner = styled.View`
   padding: 32px;
   width: 100%;
   max-width: 640px;
-  background: ${colors.tertiary};
-  border-radius: 8px;
+  background: ${colors.card};
+  border-radius: 10px;
 `;
 
 export const ButtonClose = styled.TouchableOpacity`
   position: absolute;
-  top: 16px;
-  right: 16px;
+  top: 20px;
+  right: 20px;
   transition: color 0.3s;
 `;
