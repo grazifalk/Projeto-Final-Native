@@ -20,7 +20,6 @@ export const CartProvider = ({ children }) => {
       item.quantidade = item.quantidade + 1;
     }
     setProductCart(itemObject);
-    
   }
 
   function removeItemCart(id) {
@@ -36,27 +35,28 @@ export const CartProvider = ({ children }) => {
     }
   }
 
-  function removalItem(id){
+  function removalItem(id) {
     const itemObject = [...productCart];
 
-    const arrayFiltered = itemObject.filter((product)=>product.id !==id)
-    setProductCart(arrayFiltered)
+    const arrayFiltered = itemObject.filter((product) => product.id !== id);
+    setProductCart(arrayFiltered);
   }
 
-  function clearCart(){
-    setProductCart([])
+  function clearCart() {
+    setProductCart([]);
   }
 
   return (
     <CartContext.Provider
-        value={{
-            productCart,
-            addItemCart,
-            removeItemCart,
-            removalItem,
-            clearCart,
-        }}>
-            {children}
+      value={{
+        productCart,
+        addItemCart,
+        removeItemCart,
+        removalItem,
+        clearCart,
+      }}
+    >
+      {children}
     </CartContext.Provider>
-  )
+  );
 };
