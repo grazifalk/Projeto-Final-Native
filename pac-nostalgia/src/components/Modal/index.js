@@ -8,7 +8,7 @@ export const Modal = (props) => {
       <PopupContainer>
         <PopupInner>
           <ButtonClose onPress={() => props.setTrigger(false)}>
-            <AntDesign name="close" color={"red"} size={24} />
+            <AntDesign name="close" color={"#fff"} size={28} />
           </ButtonClose>
           {props.children}
         </PopupInner>

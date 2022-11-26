@@ -33,19 +33,18 @@ export default function Home({ navigation }) {
           {route.params ? (
             <Text>
               Olá, {route.params.nome}!!! Seja muito bem vindo(a) a nossa loja.
-              Aqui você encontrará diversos produtos que um te fizeram sorrir,
-              seja quando criança, adolescente ou adulto. Nossa proposta é que
-              você se sinta em casa e aproveite ao máximo a experiência de poder
-              relembrar os momentos especiais vividos no passado. Divirta-se!!
+              Aqui você encontrará diversos produtos que um dia te fizeram
+              sorrir, seja quando criança, adolescente ou adulto. Nossa proposta
+              é que você se sinta em casa e aproveite ao máximo a experiência de
+              poder relembrar os momentos especiais vividos no passado.
+              Divirta-se!!
             </Text>
           ) : (
             <Text>
-              Olá!!!! Que tal fazer uma viagem no tempo e relembrar os velhos
-              tempos? Nosso maior objetivo é fazer com que os nossos queridos
-              clientes façam uma viagem no tempo e desfrutem dos melhores
-              momentos já vividos na vida de cada um. Faça já o seu cadastro
-              para conhecer e mergulhar nessa nessa incrível explosão de
-              nostalgia.
+              Olá!!!! Que tal fazer uma viagem no tempo? Nosso maior objetivo é
+              fazer com que os nossos queridos clientes desfrutem dos melhores
+              momentos já vividos. Faça já o seu cadastro para mergulhar nessa
+              incrível explosão de nostalgia!
             </Text>
           )}
         </Message>

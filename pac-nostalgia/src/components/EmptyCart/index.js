@@ -14,7 +14,7 @@ export const EmptyCart = () => {
     <>
       <Container>
         <ImageSad source={sad} resizeMode="contain" />
-        <Title>Seu carrinho está vazio :</Title>
+        <Title>Seu carrinho está vazio 😢</Title>
         <StButton onPress={screenCategories}>
           <TextButton>VOLTAR PARA A LOJA</TextButton>
         </StButton>

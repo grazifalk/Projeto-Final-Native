@@ -1,4 +1,4 @@
-import { AntDesign } from "@expo/vector-icons";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { useRoute } from "@react-navigation/native";
 import React, { useContext, useEffect, useState } from "react";
 import { Text } from "react-native";
@@ -9,10 +9,12 @@ import { Api } from "../../Services";
 import {
   CardProduct,
   Container,
+  Message,
   ProductImage,
   ProductText,
   StButton,
   TextButton,
+  Title,
 } from "./styles";
 
 export const ProductDetails = () => {
@@ -57,10 +59,9 @@ export const ProductDetails = () => {
         <ShowProduct />
       </Container>
       <Modal trigger={popup} setTrigger={setPopup}>
-        <Text>
-          <AntDesign name="shoppingcart" size={24} color="black" /> Carrinho
-        </Text>
-        <Text style={{ marginTop: 8 }}>Produto adicionado no carrinho</Text>
+        <Title>Carrinho</Title>
+        <MaterialCommunityIcons name="cart-outline" size={60} color="#fff" />
+        <Message style={{ marginTop: 8 }}>Produto adicionado ⍩⃝</Message>
       </Modal>
       <Menu />
     </>

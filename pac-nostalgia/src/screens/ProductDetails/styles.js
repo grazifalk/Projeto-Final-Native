@@ -58,3 +58,19 @@ export const TextButton = styled.Text`
   font-size: 18px;
   position: absolute;
 `;
+
+export const Title = styled.Text`
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  align-items: flex-end;
+  text-align: center;
+  color: ${colors.tertiary};
+`;
+
+export const Message = styled.Text`
+  color: ${colors.textButtonColor};
+  font-weight: 700;
+  font-size: 18px;
+  text-align: center;
+`;

@@ -17,8 +17,8 @@ export const Title = styled.Text`
 `;
 
 export const InputName = styled.TextInput`
-  width: 329px;
-  height: 68px;
+  width: 309px;
+  height: 48px;
   border-radius: 10px;
   padding-left: 10px;
   padding-right: 10px;
@@ -29,8 +29,8 @@ export const InputName = styled.TextInput`
 `;
 
 export const InputCPF = styled.TextInput`
-  width: 329px;
-  height: 68px;
+  width: 309px;
+  height: 48px;
   border-radius: 10px;
   padding-left: 10px;
   padding-right: 10px;
@@ -41,8 +41,8 @@ export const InputCPF = styled.TextInput`
 `;
 
 export const InputDate = styled.TextInput`
-  width: 329px;
-  height: 68px;
+  width: 309px;
+  height: 48px;
   border-radius: 10px;
   padding-left: 10px;
   padding-right: 10px;
@@ -53,8 +53,8 @@ export const InputDate = styled.TextInput`
 `;
 
 export const InputPassword = styled.TextInput`
-  width: 329px;
-  height: 68px;
+  width: 309px;
+  height: 48px;
   border-radius: 10px;
   padding-left: 10px;
   padding-right: 10px;
@@ -65,8 +65,8 @@ export const InputPassword = styled.TextInput`
 `;
 
 export const InputConfirmPassword = styled.TextInput`
-  width: 329px;
-  height: 68px;
+  width: 309px;
+  height: 48px;
   border-radius: 10px;
   padding-left: 10px;
   padding-right: 10px;
@@ -77,8 +77,8 @@ export const InputConfirmPassword = styled.TextInput`
 `;
 
 export const StButton = styled.TouchableOpacity`
-  width: 329px;
-  height: 47px;
+  width: 309px;
+  height: 48px;
   background: ${colors.buttonColor};
   border-radius: 10px;
   align-items: center;
