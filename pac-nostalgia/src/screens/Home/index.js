@@ -11,8 +11,6 @@ import {
 } from "./styles";
 import { Menu } from "../../components/Menu";
 import LG from "../../../assets/LG.png";
-import { MaterialCommunityIcons } from "@expo/vector-icons";
-import colors from "../../themes/colors.js";
 import { useNavigation } from "@react-navigation/native";
 import { Carousel } from "../../components/Carousel";
 
@@ -22,13 +20,6 @@ export default function Home() {
     <Container>
       <Up>
         <Logo source={LG} resizeMode="contain" />
-        <TouchableOpacity onPress={() => navigation.navigate("Cart")}>
-          <MaterialCommunityIcons
-            name="cart-outline"
-            size={35}
-            color={colors.tertiary}
-          />
-        </TouchableOpacity>
       </Up>
       <Card>
         <Message>
