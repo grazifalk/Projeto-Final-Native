@@ -23,7 +23,7 @@ export const ProductDetails = () => {
 
   const addCart = (id, foto, nome, preco) => {
     console.log(id, foto, nome, preco);
-    addItemCart(id, foto, nome, preco)
+    addItemCart(id, foto, nome, preco);
     setPopup(true);
   };
 
@@ -42,8 +42,9 @@ export const ProductDetails = () => {
           <ProductText>{data?.descricao}</ProductText>
           <ProductText>R$ {data?.preco.toFixed(2)}</ProductText>
         </CardProduct>
-        <StButton onPress={() => addCart(data.id, data.foto, data.nome, data.preco)
-         }>
+        <StButton
+          onPress={() => addCart(data.id, data.foto, data.nome, data.preco)}
+        >
           <TextButton>COMPRAR</TextButton>
         </StButton>
       </Container>

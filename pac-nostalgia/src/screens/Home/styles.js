@@ -53,7 +53,7 @@ export const Message = styled.Text`
   margin-right: 50px;
   width: 300px;
   height: 200px;
-  top: 12px;
+  top: 18px;
 `;
 
 export const NewProduct = styled.Text`
