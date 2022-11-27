@@ -1,6 +1,23 @@
 # Projeto-Final-Native
 
-<img src="https://media.discordapp.net/attachments/1008797656270782546/1045188651321151508/Figma.png" alt="Protótipo Figma"/>
+Criar um app para usuário.
+
+## Requisitos:
+
+Criar um app para usuário: <br/>
+Tela de Login <br/>
+Create(get) de Categorias <br/>
+Create(get) de Produtos <br/>
+CRUD do Usuário <br/>
+Carrinho <br/>
+
+## Bônus:
+Mensagens de autenticação <br/>
+Uso de modal <br/>
+
+## Protótipo
+
+<img src="https://media.discordapp.net/attachments/489854983022575617/1046486284262191164/pac-nostalgia.png" alt="Protótipo Figma"/>
 
 ## Autores
 
