@@ -4,19 +4,16 @@ import colors from "../../themes/colors.js";
 export const Container = styled.View`
   flex: 1;
   background-color: ${colors.primary};
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 `;
 
 export const CardProduct = styled.View`
   width: 352.08px;
-  height: 390px;
+  height: 335px;
   border-radius: 10px;
   align-items: center;
   background: ${colors.card};
-  padding-right: 50px;
-  padding-left: 50px;
-  padding-top: 10px;
 `;
 
 export const ProductImage = styled.Image`
@@ -74,25 +71,4 @@ export const Message = styled.Text`
   font-weight: 700;
   font-size: 18px;
   text-align: center;
-`;
-
-export const Up = styled.View`
-  width: 112%;
-  height: 77px;
-  background-color: ${colors.secondary};
-  flex-direction: row;
-  align-items: center;
-  position: absolute;
-  top: 0;
-  justify-content: center;
-  padding-left: 30px;
-  padding-right: 0px;
-`;
-
-export const TitleTwo = styled.Text`
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 29px;
-  text-align: center;
-  color: ${colors.tertiary};
 `;
